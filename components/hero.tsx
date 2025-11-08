@@ -54,13 +54,13 @@ export function Hero() {
           </Button>
         </div>
 
-        <p className="text-sm text-muted-foreground pt-4">
+        <p className="text-sm text-muted-foreground">
           No ads. No noise. Just clean, mindful connection.
         </p>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce z-20">
+      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50 animate-pulse" />
         </div>

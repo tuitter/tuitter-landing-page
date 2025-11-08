@@ -1,51 +1,62 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { addToWaitlist } from "@/app/actions"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { addToWaitlist } from "@/app/actions";
 
 interface SignupDialogProps {
-  open: boolean
-  onOpenChange: (open: boolean) => void
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }
 
 export function SignupDialog({ open, onOpenChange }: SignupDialogProps) {
-  const [email, setEmail] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setMessage(null)
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage(null);
 
-    const result = await addToWaitlist(email)
+    const result = await addToWaitlist(email.toLowerCase());
 
-    setIsLoading(false)
+    setIsLoading(false);
     setMessage({
       type: result.success ? "success" : "error",
       text: result.message,
-    })
+    });
 
     if (result.success) {
-      setEmail("")
+      setEmail("");
       setTimeout(() => {
-        onOpenChange(false)
-        setMessage(null)
-      }, 2000)
+        onOpenChange(false);
+        setMessage(null);
+      }, 2000);
     }
-  }
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md bg-background border-purple/20">
         <DialogHeader>
-          <DialogTitle className="font-heading text-2xl text-foreground">Join the Waitlist</DialogTitle>
+          <DialogTitle className="font-heading text-2xl text-foreground">
+            Join the Waitlist
+          </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             Be the first to experience the terminal-based social network.
           </DialogDescription>
@@ -60,13 +71,19 @@ export function SignupDialog({ open, onOpenChange }: SignupDialogProps) {
               type="email"
               placeholder="you@example.com"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value.toLowerCase())}
               required
               className="bg-background/50 border-purple/20 text-foreground placeholder:text-muted-foreground"
             />
           </div>
           {message && (
-            <p className={`text-sm ${message.type === "success" ? "text-green" : "text-red"}`}>{message.text}</p>
+            <p
+              className={`text-sm ${
+                message.type === "success" ? "text-green" : "text-red"
+              }`}
+            >
+              {message.text}
+            </p>
           )}
           <Button
             type="submit"
@@ -78,5 +95,5 @@ export function SignupDialog({ open, onOpenChange }: SignupDialogProps) {
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

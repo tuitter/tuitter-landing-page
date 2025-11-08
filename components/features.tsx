@@ -1,28 +1,38 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Zap, Focus, Sparkles, Shield } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { Zap, Focus, Sparkles, Shield, Terminal } from "lucide-react";
 
 const features = [
   {
+    icon: Terminal,
+    title: "Terminal-first TUI",
+    description:
+      "Built around a keyboard-first terminal user interface (TUI) — minimal chrome, powerful shortcuts, and accessible from your terminal.",
+  },
+  {
     icon: Zap,
     title: "Instant Posting",
-    description: "Share your thoughts, images, and ASCII art directly — no distractions, just expression.",
+    description:
+      "Share your thoughts, images, and ASCII art directly — no distractions, just expression.",
   },
   {
     icon: Focus,
     title: "Simple by Design",
-    description: "No ads. No noise. Just clean, mindful connection that keeps you in control.",
+    description:
+      "No ads. No noise. Just clean, mindful connection that keeps you in control.",
   },
   {
     icon: Sparkles,
     title: "Creativity in Every Line",
-    description: "Turn visuals into living text art that speaks louder than pixels.",
+    description:
+      "Turn visuals into living text art that speaks louder than pixels.",
   },
   {
     icon: Shield,
     title: "Powered by Modern Tech",
-    description: "Built on Python, FastAPI, and AWS for security, speed, and reliability.",
+    description:
+      "Built on Python, FastAPI, and AWS for security, speed, and reliability.",
   },
-]
+];
 
 export function Features() {
   return (
@@ -37,7 +47,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr items-stretch">
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -47,13 +57,17 @@ export function Features() {
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <feature.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="font-heading text-xl font-semibold">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

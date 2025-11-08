@@ -1,23 +1,23 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Space_Grotesk, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Space_Grotesk, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-heading",
-})
+});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
-})
+});
 
 export const metadata: Metadata = {
   title: "Tuitter — Terminal Social, Reimagined",
   description:
-    "A creative social platform that lives inside your terminal — powerful, minimal, and beautifully different.",
+    "A creative social platform that lives inside your terminal (TUI) — keyboard-first, minimal, and beautifully different.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -36,19 +36,22 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
         {children}
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
