@@ -56,7 +56,7 @@ export function Hero() {
             onClick={() => setDialogOpen(true)}
             className="cursor-pointer text-lg px-8 py-6 bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
           >
-            sign up free
+            be a tester
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button

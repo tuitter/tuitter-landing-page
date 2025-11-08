@@ -28,8 +28,8 @@ export function CTA() {
             onClick={() => setDialogOpen(true)}
             className="cursor-pointer text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 bg-gradient-to-r from-primary via-accent to-secondary hover:opacity-90 transition-all duration-300 shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105"
           >
-            sign up free
-            <ArrowRight className="ml-3 h-6 w-6" />
+            be a tester
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
 
