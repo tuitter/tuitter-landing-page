@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tuitter — Terminal Social, Reimagined",
+  title: "Tuitter: Terminal Social, Reimagined",
   description:
-    "A creative social platform that lives inside your terminal (TUI) — keyboard-first, minimal, and beautifully different.",
+    "A creative social platform that lives inside your terminal (TUI), keyboard-first, minimal, and beautifully different.",
   generator: "v0.app",
   icons: {
     icon: [

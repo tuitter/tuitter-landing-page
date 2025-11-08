@@ -31,8 +31,8 @@ export function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-          A creative social platform that lives inside your terminal — powerful,
-          minimal, and beautifully different.
+          A creative social platform that lives inside your terminal <br />
+          Powerful, minimal, and beautifully different.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">

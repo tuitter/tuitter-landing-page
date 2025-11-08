@@ -10,7 +10,7 @@ export function Showcase() {
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Posts, pictures, and conversations displayed with effortless
-            simplicity — it feels natural, quiet, and beautiful.
+            simplicity, it feels natural, quiet, and beautiful.
           </p>
         </div>
 

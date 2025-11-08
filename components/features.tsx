@@ -6,13 +6,13 @@ const features = [
     icon: Terminal,
     title: "Terminal-first TUI",
     description:
-      "Built around a keyboard-first terminal user interface (TUI) — minimal chrome, powerful shortcuts, and accessible from your terminal.",
+      "Built around a keyboard-first terminal user interface (TUI), with minimal chrome, powerful shortcuts, and accessible from your terminal.",
   },
   {
     icon: Zap,
     title: "Instant Posting",
     description:
-      "Share your thoughts, images, and ASCII art directly — no distractions, just expression.",
+      "Share your thoughts, images, and ASCII art directly; no distractions, just expression.",
   },
   {
     icon: Focus,
