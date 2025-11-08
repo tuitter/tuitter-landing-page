@@ -16,10 +16,19 @@ export function Testimonials() {
   return (
     <section className="py-32 px-4 relative">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance">
-            what people are saying
-          </h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance">
+              built for everyone,{" "}
+              <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                loved by developers
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              tuitter helps merge human connection with developer-grade
+              performance.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
