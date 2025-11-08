@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Database, Lock, Zap } from "lucide-react";
 
 const techStack = [
-  { icon: Code2, label: "Frontend", value: "Python Textual" },
-  { icon: Zap, label: "Backend", value: "FastAPI on AWS Lambda" },
-  { icon: Database, label: "Database", value: "PostgreSQL (RDS)" },
-  { icon: Lock, label: "Auth", value: "AWS Cognito (OIDC)" },
+  { icon: Code2, label: "frontend", value: "python textual" },
+  { icon: Zap, label: "backend", value: "fastapi on aws lambda" },
+  { icon: Database, label: "database", value: "postgres (rds)" },
+  { icon: Lock, label: "auth", value: "aws cognito" },
 ];
 
 export function Architecture() {
@@ -20,7 +20,8 @@ export function Architecture() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            tuitter merges human creativity with developer-grade performance.
+            tuitter helps merge human connection with developer-grade
+            performance.
           </p>
         </div>
 

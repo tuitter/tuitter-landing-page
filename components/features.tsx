@@ -12,13 +12,13 @@ const features = [
     icon: Zap,
     title: "instant posting",
     description:
-      "share your thoughts, images, and ascii art directly; no distractions, just expression.",
+      "share your thoughts, images, and videos directly; no distractions, just connection.",
   },
   {
     icon: Focus,
     title: "simple by design",
     description:
-      "no ads. no noise. just clean, mindful connection that keeps you in control.",
+      "no ads. no noise. just clean a experience to share with others.",
   },
   {
     icon: Sparkles,
@@ -30,7 +30,7 @@ const features = [
     icon: Shield,
     title: "powered by modern tech",
     description:
-      "built on python, fastapi, and aws for security, speed, and reliability.",
+      "built with textual, packaged for your needs, and powered by aws for security, speed, and reliability.",
   },
 ];
 

@@ -34,7 +34,7 @@ export function Testimonials() {
                   {testimonial.text}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  · {testimonial.author}
+                  — {testimonial.author}
                 </p>
               </CardContent>
             </Card>

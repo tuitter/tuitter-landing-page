@@ -46,7 +46,7 @@ export function Hero() {
         </h2>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-          a creative social platform that lives inside your terminal. powerful,
+          a social platform that lives purely inside your terminal. powerful,
           minimal, and beautifully different.
         </p>
 
