@@ -6,11 +6,10 @@ export function Showcase() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
-            your feed. reinvented.
+            code and doomscroll all in one place.
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            posts, pictures, and conversations displayed with effortless
-            simplicity, it feels natural, quiet, and beautiful.
+            posts, conversations, and brainrot — right in your terminal.
           </p>
         </div>
 
