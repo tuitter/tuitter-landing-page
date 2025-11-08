@@ -74,7 +74,7 @@ export function Hero() {
       <div
         aria-hidden
         className={
-          `absolute left-1/2 -translate-x-1/2 z-50 pointer-events-none bottom-4 transition-all duration-500 ` +
+          `absolute left-1/2 -translate-x-1/2 z-50 pointer-events-none bottom-8 sm:bottom-4 transition-all duration-500 ` +
           (hasScrolled
             ? "opacity-0 translate-y-4 animate-none"
             : "opacity-100 animate-bounce")
