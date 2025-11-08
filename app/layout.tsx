@@ -6,13 +6,12 @@ import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-heading",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
   variable: "--font-body",
 });
+
+// Keep the `inter` reference so the existing body class still works,
+// but point it to Space Grotesk so only that font is loaded.
+const inter = spaceGrotesk;
 
 export const metadata: Metadata = {
   title: "Tuitter: Terminal Social, Reimagined",
