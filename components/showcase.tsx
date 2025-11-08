@@ -6,10 +6,10 @@ export function Showcase() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
-            Your Feed. Reinvented.
+            your feed. reinvented.
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Posts, pictures, and conversations displayed with effortless
+            posts, pictures, and conversations displayed with effortless
             simplicity, it feels natural, quiet, and beautiful.
           </p>
         </div>
@@ -34,7 +34,7 @@ export function Showcase() {
                 <div className="space-y-2">
                   <div className="text-secondary">@iloveburg3rsz</div>
                   <div>
-                    I could never abuse substances. I love substances 😭
+                    i could never abuse substances. i love substances 😭
                   </div>
                   <div className="flex gap-4 text-xs text-muted-foreground pt-2">
                     <span className="text-destructive">❤ 45</span>
@@ -119,7 +119,7 @@ export function Showcase() {
                 <div className="h-px bg-muted" />
 
                 <div className="animate-pulse text-muted-foreground">
-                  Loading more posts...
+                  loading more posts...
                 </div>
               </div>
             </div>

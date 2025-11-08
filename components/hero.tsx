@@ -23,25 +23,26 @@ export function Hero() {
           <Terminal className="w-10 h-10 text-primary" />
         </div>
 
-        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-balance">
-          Tuitter —{" "}
-          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Social, Simplified.
-          </span>
+        <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-balance">
+          tuitter
         </h1>
 
+        <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold bg-linear-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          social, simplified.
+        </h2>
+
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-          A creative social platform that lives inside your terminal <br />
-          Powerful, minimal, and beautifully different.
+          a creative social platform that lives inside your terminal. powerful,
+          minimal, and beautifully different.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
           <Button
             size="lg"
             onClick={() => setDialogOpen(true)}
-            className="cursor-pointer text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
+            className="cursor-pointer text-lg px-8 py-6 bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25"
           >
-            Sign Up Free
+            sign up free
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
@@ -50,12 +51,12 @@ export function Hero() {
             onClick={handleLearnMore}
             className="cursor-pointer text-lg px-8 py-6 border-muted-foreground/30 hover:border-primary/50 hover:bg-card/50 bg-transparent hover:text-white"
           >
-            Learn More
+            learn more
           </Button>
         </div>
 
         <p className="text-sm text-muted-foreground">
-          No ads. No noise. Just clean, mindful connection.
+          no ads. no noise. just clean, mindful connection.
         </p>
       </div>
 

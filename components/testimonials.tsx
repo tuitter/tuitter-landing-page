@@ -1,16 +1,16 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Quote } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Beautifully simple. A breath of fresh air in social media.",
-    author: "Creative Technologist",
+    text: "beautifully simple. a breath of fresh air in social media.",
+    author: "creative technologist",
   },
   {
-    text: "It feels calm, private, and genuinely expressive.",
-    author: "Designer & Writer",
+    text: "it feels calm, private, and genuinely expressive.",
+    author: "designer & writer",
   },
-]
+];
 
 export function Testimonials() {
   return (
@@ -18,7 +18,7 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance">
-            What People Are Saying
+            what people are saying
           </h2>
         </div>
 
@@ -30,13 +30,17 @@ export function Testimonials() {
             >
               <CardContent className="p-10 space-y-6">
                 <Quote className="w-10 h-10 text-primary/40" />
-                <p className="text-xl leading-relaxed text-foreground">{testimonial.text}</p>
-                <p className="text-sm text-muted-foreground">— {testimonial.author}</p>
+                <p className="text-xl leading-relaxed text-foreground">
+                  {testimonial.text}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  · {testimonial.author}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

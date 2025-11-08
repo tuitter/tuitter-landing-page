@@ -4,33 +4,33 @@ import { Zap, Focus, Sparkles, Shield, Terminal } from "lucide-react";
 const features = [
   {
     icon: Terminal,
-    title: "Terminal-first TUI",
+    title: "terminal-first tui",
     description:
-      "Built around a keyboard-first terminal user interface (TUI), with minimal chrome, powerful shortcuts, and accessible from your terminal.",
+      "built around a keyboard-first terminal user interface (tui), with minimal chrome, powerful shortcuts, and accessible from your terminal.",
   },
   {
     icon: Zap,
-    title: "Instant Posting",
+    title: "instant posting",
     description:
-      "Share your thoughts, images, and ASCII art directly; no distractions, just expression.",
+      "share your thoughts, images, and ascii art directly; no distractions, just expression.",
   },
   {
     icon: Focus,
-    title: "Simple by Design",
+    title: "simple by design",
     description:
-      "No ads. No noise. Just clean, mindful connection that keeps you in control.",
+      "no ads. no noise. just clean, mindful connection that keeps you in control.",
   },
   {
     icon: Sparkles,
-    title: "Creativity in Every Line",
+    title: "creativity in every line",
     description:
-      "Turn visuals into living text art that speaks louder than pixels.",
+      "turn visuals into living text art that speaks louder than pixels.",
   },
   {
     icon: Shield,
-    title: "Powered by Modern Tech",
+    title: "powered by modern tech",
     description:
-      "Built on Python, FastAPI, and AWS for security, speed, and reliability.",
+      "built on python, fastapi, and aws for security, speed, and reliability.",
   },
 ];
 
@@ -40,10 +40,10 @@ export function Features() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
-            What Makes Tuitter Unique
+            what makes tuitter unique
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience social media without the complexity
+            experience social media without the complexity
           </p>
         </div>
 

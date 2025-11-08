@@ -1,12 +1,12 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Database, Lock, Zap } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { Code2, Database, Lock, Zap } from "lucide-react";
 
 const techStack = [
   { icon: Code2, label: "Frontend", value: "Python Textual" },
   { icon: Zap, label: "Backend", value: "FastAPI on AWS Lambda" },
   { icon: Database, label: "Database", value: "PostgreSQL (RDS)" },
   { icon: Lock, label: "Auth", value: "AWS Cognito (OIDC)" },
-]
+];
 
 export function Architecture() {
   return (
@@ -14,13 +14,13 @@ export function Architecture() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance">
-            Built for Everyone,{" "}
+            built for everyone,{" "}
             <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Loved by Developers
+              loved by developers
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Tuitter merges human creativity with developer-grade performance.
+            tuitter merges human creativity with developer-grade performance.
           </p>
         </div>
 
@@ -35,7 +35,9 @@ export function Architecture() {
                   <tech.icon className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">{tech.label}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {tech.label}
+                  </div>
                   <div className="font-semibold mt-1">{tech.value}</div>
                 </div>
               </CardContent>
@@ -44,5 +46,5 @@ export function Architecture() {
         </div>
       </div>
     </section>
-  )
+  );
 }
