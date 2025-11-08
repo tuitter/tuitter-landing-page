@@ -104,10 +104,10 @@ export function Showcase() {
                 <div className="h-px bg-muted" />
 
                 <div className="space-y-2">
-                  <div className="text-secondary">@techwriter</div>
+                  <div className="text-secondary">@justadev</div>
                   <div>
                     Just discovered Tuitter. Finally, social media that respects
-                    my attention.
+                    my attention!
                   </div>
                   <div className="flex gap-4 text-xs text-muted-foreground pt-2">
                     <span className="text-destructive">❤ 12</span>
