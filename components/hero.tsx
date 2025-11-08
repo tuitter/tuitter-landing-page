@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Terminal } from "lucide-react"
-import { SignupDialog } from "@/components/signup-dialog"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Terminal } from "lucide-react";
+import { SignupDialog } from "@/components/signup-dialog";
+import { useState } from "react";
 
 export function Hero() {
-  const [dialogOpen, setDialogOpen] = useState(false)
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const handleLearnMore = () => {
-    const featuresSection = document.getElementById("features")
+    const featuresSection = document.getElementById("features");
     if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: "smooth" })
+      featuresSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4">
@@ -31,7 +31,8 @@ export function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
-          A creative social platform that lives inside your terminal — powerful, minimal, and beautifully different.
+          A creative social platform that lives inside your terminal — powerful,
+          minimal, and beautifully different.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
@@ -47,13 +48,15 @@ export function Hero() {
             size="lg"
             variant="outline"
             onClick={handleLearnMore}
-            className="cursor-pointer text-lg px-8 py-6 border-muted-foreground/30 hover:border-primary/50 hover:bg-card/50 bg-transparent"
+            className="cursor-pointer text-lg px-8 py-6 border-muted-foreground/30 hover:border-primary/50 hover:bg-card/50 bg-transparent hover:text-white"
           >
             Learn More
           </Button>
         </div>
 
-        <p className="text-sm text-muted-foreground pt-4">No ads. No noise. Just clean, mindful connection.</p>
+        <p className="text-sm text-muted-foreground pt-4">
+          No ads. No noise. Just clean, mindful connection.
+        </p>
       </div>
 
       {/* Scroll indicator */}
@@ -65,5 +68,5 @@ export function Hero() {
 
       <SignupDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
-  )
+  );
 }
