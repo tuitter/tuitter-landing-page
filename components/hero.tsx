@@ -3,10 +3,24 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal } from "lucide-react";
 import { SignupDialog } from "@/components/signup-dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Hero() {
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // hide indicator when user scrolls away from top
+      setHasScrolled(window.scrollY > 0);
+    };
+
+    // check initial position (in case page is loaded scrolled)
+    onScroll();
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleLearnMore = () => {
     const featuresSection = document.getElementById("features");
@@ -19,7 +33,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-4">
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8 animate-slide-up">
         {/* Floating terminal icon */}
-        <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-card border border-primary/30 mb-8 animate-float">
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-card border border-primary/30 mb-8 mt-4 animate-float">
           <Terminal className="w-10 h-10 text-primary" />
         </div>
 
@@ -36,7 +50,7 @@ export function Hero() {
           minimal, and beautifully different.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 mb-20">
           <Button
             size="lg"
             onClick={() => setDialogOpen(true)}
@@ -54,15 +68,19 @@ export function Hero() {
             learn more
           </Button>
         </div>
-
-        <p className="text-sm text-muted-foreground">
-          no ads. no noise. just clean, mindful connection.
-        </p>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 animate-bounce z-20">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
+      {/* Scroll indicator: fades and stops animating once the user starts scrolling */}
+      <div
+        aria-hidden
+        className={
+          `absolute left-1/2 -translate-x-1/2 z-50 pointer-events-none bottom-4 transition-all duration-500 ` +
+          (hasScrolled
+            ? "opacity-0 translate-y-4 animate-none"
+            : "opacity-100 animate-bounce")
+        }
+      >
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2 bg-transparent">
           <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50 animate-pulse" />
         </div>
       </div>
