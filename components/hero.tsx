@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { SignupDialog } from "@/components/signup-dialog";
 import { useState, useEffect } from "react";
 
@@ -34,7 +35,13 @@ export function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8 animate-slide-up">
         {/* Floating terminal icon */}
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-card border border-primary/30 mb-8 mt-4 animate-float">
-          <Terminal className="w-10 h-10 text-primary" />
+          <Image
+            src="/tuitter-new-purple.png"
+            alt="Feather icon"
+            width={80}
+            height={80}
+            className="w-20 h-20 object-contain"
+          />
         </div>
 
         <h1 className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-balance">
